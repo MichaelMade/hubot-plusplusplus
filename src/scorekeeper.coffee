@@ -53,7 +53,7 @@ class ScoreKeeper
 
   subtract: (user, from, room, reason) ->
     if user == "bigkoala"
-      [null, null]
+      return false
     if @validate(user, from)
       user = @getUser(user)
       @storage.scores[user]--
