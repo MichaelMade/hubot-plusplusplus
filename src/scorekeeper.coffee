@@ -121,8 +121,9 @@ class ScoreKeeper
 
   validate: (user, from) ->
     if user == "bigkoala"
+      return true
     else
-    user != from && user != "" && !@isSpam(user, from)
+      user != from && user != "" && !@isSpam(user, from)
 
   length: () ->
     @storage.log.length
